@@ -1,0 +1,112 @@
+@use "./mixins" as *;
+@use "./variables" as variables;
+
+#projects {
+  .wrapper {
+    grid-auto-columns: 1fr;
+    @include screen-size(small) {
+      grid-template-rows: fit-content 1fr;
+    }
+  }
+
+  article {
+    button {
+      @include button-primary;
+      width: 100%;
+      margin-bottom: 0.25rem;
+    }
+    button:hover {
+      @include hover-primary;
+    }
+  }
+
+  .projects-carousel {
+    display: grid;
+    place-items: center;
+    position: relative;
+    height: clamp(320px, 60vh, 380px);
+    --width: min(340px, 29vw);
+    @media only screen and (max-width: 600px) {
+      --width: 55%;
+    }
+
+    @media only screen and (min-width: 600px) and (max-width: 800px) {
+      --width: 40%;
+    }
+
+    div {
+      width: calc(var(--width));
+      aspect-ratio: 1.15 / 1;
+      position: absolute;
+      border-radius: 10px;
+      background-image: url(../assets/projects/background.png);
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04),
+        0 6px 20px 0 rgba(0, 0, 0, 0.08);
+      transition: all 1s ease-out;
+    }
+
+    // Item's Images
+    .item:first-of-type {
+
+    }
+    .item:nth-of-type(2) {
+
+    }
+    .item:nth-of-type(3) {
+      background-image: url(../assets/projects/fylo.png);
+    }
+    .item:nth-of-type(4) {
+      background-image: url(../assets/projects/room.png);
+    }
+
+    // Items Position
+    .behind {
+      transform: translateY(-65%);
+      width: calc(var(--width) * 0.62);
+    }
+
+    .next {
+      transform: translate(75%, -25%);
+      z-index: 2;
+      width: calc(var(--width) * 0.68);
+    }
+
+    .previous {
+      transform: translate(-75%, -25%);
+      z-index: 2;
+      width: calc(var(--width) * 0.68);
+    }
+
+    .current {
+      transform: translateY(25%);
+      z-index: 4;
+    }
+
+    // Arrows
+    button {
+      position: absolute;
+      bottom: 0;
+      z-index: 5;
+      opacity: 0.85;
+      @include square(calc(var(--width) * 0.2));
+      @include flex-centered;
+      i {
+        color: white;
+      }
+    }
+
+    button:hover {
+      @include hover-secondary;
+    }
+
+    #left {
+      left: 5vw;
+    }
+
+    #right {
+      right: 5vw;
+    }
+  }
+}

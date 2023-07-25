@@ -1,0 +1,91 @@
+@use "./mixins" as *;
+@use "./variables" as variables;
+
+header {
+  padding: $padding1;
+  @include screen-size(large) {
+    padding: $padding2;
+    padding-block: 1.2rem;
+  }
+  background-color: rgba(218, 218, 218, 0.96);
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  display: grid;
+  grid-template-areas: "logo logo logo logo logo logo logo nav nav . resume";
+  @include screen-size(small) {
+    grid-template-areas: "toggle logo resume";
+    justify-content: space-between;
+  }
+
+  .logo {
+    grid-area: logo;
+    justify-content: left;
+  }
+
+  .resume {
+    grid-area: resume;
+    justify-self: right;
+    button {
+      @include button-secondary;
+    }
+    button:hover {
+      @include hover-secondary;
+    }
+  }
+
+  i {
+    color: white;
+    transform: scale(0.85);
+  }
+
+  .circle {
+    @include circle(28px);
+    @include flex-centered;
+    margin-right: 0.6rem;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  nav {
+    grid-area: nav;
+    @include screen-size(small) {
+      position: absolute;
+      width: 100%;
+      padding: 1rem;
+      background: rgba(203, 203, 203, 0.95);
+      top: 0;
+      left: 0;
+      transform: translateY(-100%);
+      transition: transform 0.5s ease-out;
+      z-index: 100;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      @include screen-size(small) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 1.6rem;
+        margin-top: 1.6rem;
+      }
+    }
+  }
+
+  button.toggle {
+    grid-area: toggle;
+    @include screen-size(large) {
+      display: none;
+    }
+  }
+
+  .visible {
+    transform: translateY(0);
+  }
+}

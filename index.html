@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostafa Hashem</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5538c412ff.js" crossorigin="anonymous"></script>
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <header>
+
+        <button class="toggle" type="button" aria-label="Open Nav menu">
+            <svg class="active" id="open-icon" width="20" height="14" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 12v2H0v-2h20zm0-6v2H0V6h20zm0-6v2H0V0h20z" fill="#333" fill-rule="evenodd" />
+            </svg>
+        </button>
+        <div class="logo">
+            <a href="#">
+                <div class="circle">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+                Home
+            </a>
+        </div>
+
+        <nav>
+
+            <button class="toggle" type="button" aria-label="Close Nav menu">
+                <svg id="close-icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M14.364.222l1.414 1.414L9.414 8l6.364 6.364-1.414 1.414L8 9.414l-6.364 6.364-1.414-1.414L6.586 8 .222 1.636 1.636.222 8 6.586 14.364.222z"
+                        fill="#000" fill-rule="evenodd" />
+                </svg>
+            </button>
+            <ul>
+
+                <li>
+                    <a href="#skills">
+                        <div class="circle">
+                            <i class="fa-solid fa-circle-nodes"></i>
+                        </div>
+                        Skills
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#projects">
+                        <div class="circle">
+                            <i class="fa-solid fa-briefcase fa-xs"></i>
+                        </div>
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        <div class="circle">
+                            <i class="fa-solid fa-at fa-xs"></i>
+                        </div>
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <div class="resume">
+            <a href="./assets/Resume.pdf" target="_blank">
+                <button type="button">Resume</button>
+            </a>
+        </div>
+
+    </header>
+
+    <main>
+
+        <!-- Home Section -->
+        <section id="home">
+
+            <div class="wrapper">
+                <article>
+                    <h1><span class="first-name">MOSTAFA</span> HASHEM</h1>
+                    <div class="description">
+                        <p>Front-end Developer</p>
+                        <p>Your best choice for outstanding aesthetic websites.</p>
+                        <a href="#contact"><button>Contact me</button></a>
+                    </div>
+                </article>
+                <img src="assets/Personal-img-circle.png" alt="Personal Image">
+            </div>
+
+        </section>
+        <hr>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="wrapper">
+                <article>
+                    <ul>
+                        <li title="HTML">
+                            <div class="circle">
+                                <i class="fa-brands fa-html5"></i>
+                            </div>
+                            <p>HTML</p>
+                        </li>
+                        <li title="CSS">
+                            <div class="circle">
+                                <i class="fa-brands fa-css3-alt"></i>
+                            </div>
+                            <p>CSS</p>
+                        </li>
+                        <li title="JavaScript">
+                            <div class="circle">
+                                <i class="fa-brands fa-square-js"></i>
+                            </div>
+                            <p>JavaScript</p>
+                        </li>
+                        <li title="SASS">
+                            <div class="circle">
+                                <i class="fa-brands fa-sass"></i>
+                            </div>
+                            <p>SASS</p>
+                        </li>
+                        <li title="Node.js">
+                            <div class="circle">
+                                <i class="fa-brands fa-node"></i>
+                            </div>
+                            <p>Node.js</p>
+                        </li>
+                        <li title="Figma">
+                            <div class="circle">
+                                <i class="fa-brands fa-figma"></i>
+                            </div>
+                            <p>Figma</p>
+                        </li>
+                    </ul>
+                </article>
+                <img src="assets/skills.svg" alt="Skills illustration">
+            </div>
+        </section>
+        <hr>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects">
+            <h2>LATEST PROJECTS</h2>
+            <div class="wrapper">
+
+                <article>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse illum repellat non voluptates
+                        aspernatur deleniti, recusandae at hic repudiandae cupiditate necessitatibus praesentium aut
+                        minima minus reiciendis nisi. Error, nesciunt laboriosam.</p>
+                    <div>
+                        <button type="button">Live Preview</button>
+                        <button type="button">Code</button>
+                    </div>
+                </article>
+
+                <div class="projects-carousel">
+                    <button id="left" class="square">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <div class="item behind"></div>
+                    <div class="item previous"></div>
+                    <div class="item next"></div>
+                    <div class="item current"></div>
+
+                    <button id="right" class="square">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+        <hr>
+
+    </main>
+
+    <footer id="contact">
+        <h2>CONTACT</h2>
+        <div class="wrapper">
+            <article class="form">
+                <h3>Contact me</h3>
+                <form action="https://submit-form.com/oD5Wun7o" method="post">
+                    <label for="name">Name
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
+                    </label>
+
+                    <label for="email">Email
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </label>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </article>
+
+            <article class="social">
+                <h3>Stay in touch</h3>
+                <ul>
+                    <li>
+                        <a href="mailto:mostafaahmed099@gmail.com" target="_blank">
+                            <div class="circle">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/mostafa-hashem-38345a249" target="_blank">
+                            <div class="circle">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/Mostaafaa.0" target="_blank">
+                            <div class="circle">
+                                <i class="fa-brands fa-facebook"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/mostafaa.0" target="_blank">
+                            <div class="circle">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+        </div>
+    </footer>
+</body>
+
+</html>

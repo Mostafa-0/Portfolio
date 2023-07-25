@@ -1,0 +1,40 @@
+@use "./mixins" as *;
+@use "./variables" as variables;
+
+#skills {
+  img{
+    margin: 0;
+  }
+
+  .wrapper{
+    @include screen-size(small) {
+      place-items: center;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: min(450px, 100vw);
+    .circle{
+      @include circle(min(100px, 15vw));
+      @include flex-centered;
+    }
+
+    p{
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    i{
+      color: white;
+    }
+
+    .circle:hover {
+      transform: scale(1.1);
+      transition: all 0.8s;
+      background-color: $grey;
+    }
+  }
+}

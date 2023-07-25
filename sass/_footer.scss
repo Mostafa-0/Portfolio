@@ -1,0 +1,46 @@
+@use "./mixins" as *;
+@use "./variables" as variables;
+
+footer {
+    .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+  ul {
+    display: flex;
+  }
+
+  form {
+    display: grid;
+    gap: $gap1;
+    label {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: 1fr 3fr;
+      gap: calc(1rem + 1vw);
+    }
+  }
+
+  button{
+    @include button-primary;
+  }
+
+  button:hover{
+    @include hover-primary;
+  }
+
+  article {
+    justify-content: flex-start;
+  }
+
+  i {
+    color: white;
+    transform: scale(0.5);
+  }
+
+  .circle {
+    @include circle(40px);
+    @include flex-centered;
+  }
+}

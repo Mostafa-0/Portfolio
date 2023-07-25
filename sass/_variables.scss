@@ -1,0 +1,41 @@
+// Colors
+// Primary
+$black: #1e1e1e;
+$white: #f5f5f5;
+$grey: #757575;
+
+// Background
+$light-grey: #dadada;
+
+// Fonts
+$mainFont: "Josefin Sans", sans-serif;
+// Weights: 200, 400, 700
+
+// Font Sizes
+$headings: min(2.6rem, 10vw);
+$subHeadings: min(2.4rem, 10vw);
+$subHeadings-2: min(1.8rem, 8vw);
+
+// Paddings
+$padding1: min(2rem, 3.8vw);
+$padding2: min(4rem, 8vw) min(8rem, 3.8vw);
+
+$gap1: 1rem;
+$gap2: 2rem;
+// Responsive
+// ––––––––––––––––––––
+
+// xs: Extra small (portrait phones)
+// sm: Small(landscape phones)
+// md: Medium(tablets)
+// lg: Large(desktops)
+// xl: Extra large (large desktops)
+
+// Breakpoints
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);

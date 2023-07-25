@@ -1,0 +1,164 @@
+@use "./mixins" as *;
+@use "./variables" as variables;
+@use "./header";
+@use "./home";
+@use "./skills";
+@use "./footer";
+@use "./projects";
+
+// Scroll Bar
+html {
+  font-size: 16px;
+  @include screen-size(large) {
+    font-size: 20px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 1vw;
+  height: 1vh;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $grey;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $black;
+}
+
+// Globals
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+}
+
+body {
+  line-height: 1.4;
+  background-color: $light-grey;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+
+img {
+  max-width: min(200px,90%);
+  margin: auto;
+  @include screen-size(large) {
+    max-width: min(500px, 40vw);
+  }
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+input {
+  font-family: $mainFont;
+  height: 30px;
+  padding: 0.5rem;
+  color: inherit;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  background-color: $white;
+}
+
+textarea {
+  @extend input;
+  resize: none;
+  height: 100px;
+  max-height: 100px;
+  max-width: 600px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid $grey;
+}
+
+::placeholder{
+  font-size: 13px;
+}
+
+hr {
+  display: block;
+  width: 70%;
+  height: 1px;
+  margin: 3rem auto 0rem auto;
+  border: none;
+  outline: none;
+  background: linear-gradient(90deg, transparent, black, transparent);
+}
+
+// Typography
+h1 {
+  font-size: $headings;
+}
+
+h2 {
+  font-size: $subHeadings;
+  text-align: center;
+  @include screen-size(large) {
+    margin-bottom: 3rem;
+  }
+}
+
+h3 {
+  font-weight: normal;
+  font-size: $subHeadings-2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:has(i):hover {
+  color: $grey;
+  .circle {
+    background-color: $grey;
+  }
+}
+
+// Layout
+section,
+footer {
+  padding: $padding1;
+  @include screen-size(large) {
+    padding: $padding2;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-around;
+  gap: $gap2;
+  @include screen-size(small) {
+    grid-auto-flow: row;
+    grid-template-areas: "." "article";
+    align-items: center;
+  }
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: $gap2;
+  @include screen-size(small) {
+    grid-area: article;
+    gap: $gap1;
+  }
+}

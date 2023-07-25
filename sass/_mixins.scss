@@ -1,0 +1,75 @@
+@import "./variables";
+
+// Button Design
+@mixin button-primary {
+  background-color: $black;
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+@mixin button-secondary {
+  @include button-primary;
+  padding: 0.3rem 2rem;
+  background: none;
+  border: 1px solid $black;
+  color: $black;
+}
+
+@mixin hover-primary {
+  background: $grey;
+  border-color: $grey;
+}
+
+@mixin hover-secondary {
+  background: $black;
+  border-color: $black;
+  color: $white;
+}
+
+// Centering using Flex
+@mixin flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-full-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Takes a parameter in px and creates a circle accordingly
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  background: #000000;
+  border-radius: 50%;
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+  background: #000000;
+  border-radius: 0;
+}
+
+// Media Queries
+@mixin screen-size($size) {
+  // For small and medium screens
+  @if $size == small {
+    @media only screen and (max-width: 799px) {
+      @content;
+    }
+  }
+
+  // For large screens
+  @if $size == large {
+    @media only screen and (min-width: 800px) {
+      @content;
+    }
+  }
+}
