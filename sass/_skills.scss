@@ -22,9 +22,10 @@
       @include flex-centered;
     }
 
-    p{
-      text-align: center;
-      margin-top: 8px;
+    li{
+      display: grid;
+      place-items: center;
+      gap: 0.4rem;
     }
 
     i{

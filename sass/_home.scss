@@ -8,7 +8,6 @@
     text-align: left;
     letter-spacing: 2px;
     font-size: 1.4rem;
-    animation: slide 2.5s;
   }
 
   .description {
@@ -19,36 +18,10 @@
     button:hover {
       @include hover-secondary;
     }
-    animation: slide-2 2.5s;
   }
 
   .first-name {
     font-size: calc($headings * 1.6);
     display: block;
-  }
-}
-
-@keyframes slide {
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slide-2 {
-  0% {
-    opacity: 0;
-  }
-
-  30% {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-
-  100% {
-    opacity: 1;
   }
 }

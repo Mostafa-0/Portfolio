@@ -39,7 +39,7 @@
       aspect-ratio: 1.15 / 1;
       position: absolute;
       border-radius: 10px;
-      background-image: url(../assets/projects/background.png);
+      background-image: url(../assets/projects/room.webp);
       background-size: cover;
       background-position: center;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04),
@@ -48,18 +48,15 @@
     }
 
     // Item's Images
-    .item:first-of-type {
+    // .item:first-of-type {
+    // }
+    // .item:nth-of-type(2) {
 
-    }
-    .item:nth-of-type(2) {
-
-    }
-    .item:nth-of-type(3) {
-      background-image: url(../assets/projects/fylo.png);
-    }
-    .item:nth-of-type(4) {
-      background-image: url(../assets/projects/room.png);
-    }
+    // }
+    // .item:nth-of-type(3) {
+    // }
+    // .item:nth-of-type(4) {
+    // }
 
     // Items Position
     .behind {
