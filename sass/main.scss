@@ -5,6 +5,7 @@
 @use "./skills";
 @use "./footer";
 @use "./projects";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;700&display=swap');
 
 // Scroll Bar
 html {
@@ -49,6 +50,7 @@ ul {
 }
 
 img {
+  min-width: 100px;
   max-width: min(200px,90%);
   margin: auto;
   @include screen-size(large) {
